@@ -232,11 +232,6 @@ This pilot is **pass/fail**. To earn a certificate of completion:
   - Document which parts were AI-generated
   - Can explain the code in your own words
 
-### Refundable deposit
-- $50 deposit required to hold seat
-- Refunded in full upon capstone submission
-- No-show without communication = deposit forfeited
-
 ---
 
 ## How to Use This GitHub Repo
@@ -289,9 +284,8 @@ You will receive the exact dataset and 3 business questions on Day 1 of Week 4.
 
 ---
 
-*Last updated: [Current Date]*  
+*Last updated: 06/01/2026*  
 *Instructor reserves the right to adjust schedule with 48 hours notice.*
-```
 
 ---
 
