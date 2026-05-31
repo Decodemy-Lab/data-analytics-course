@@ -1,3 +1,6 @@
+<div align="center">
+  <img src="assets/daystar-analytics-logo.png" alt="DayStar Analytics Lab Logo" width="400">
+</div>
 
 ![Pilot Status](https://img.shields.io/badge/pilot-active-brightgreen)
 ![License](https://img.shields.io/badge/license-CC%20BY--NC-blue)
