@@ -11,7 +11,7 @@
 - Final project submission: Fork this repo, complete `week4-capstone/submission_template/`, then open a Pull Request.
 
 ## Syllabus
-[Link to syllabus.md]
+[Link to syllabus.md](syllabus.md)
 
 ## Setup
 See [resources/setup_guide.md](resources/setup_guide.md)
