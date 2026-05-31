@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.ipynb_checkpoints/
+.DS_Store
+*.csv (if you have large data, otherwise keep small CSVs)
+*.xlsx
