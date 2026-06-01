@@ -992,6 +992,10 @@ df = pd.read_csv('large_file.csv', nrows=1000)
 - What are the column names?
 - Which columns have missing values?
 
+
+<details>
+<summary>Click to reveal the Python solution</summary>
+
 ```python
 # Solution
 import pandas as pd
@@ -1159,10 +1163,7 @@ df.fillna(0)                   # Fill missing with 0
 df.fillna(df['col'].mean())    # Fill with mean
 df.drop_duplicates()           # Remove duplicates
 df.rename(columns={'old':'new'})  # Rename column
-
-You are correct – the Cheat Sheet section was **cut off** in my previous response. I will continue from where it ended and complete the Week 2 Class Notes.
-
----
+```
 
 ### Grouping & Aggregation (continued from Cheat Sheet)
 
