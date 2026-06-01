@@ -1035,6 +1035,7 @@ print(category_stats)
 ```
 
 </details>
+
 ### Intermediate
 
 **Problem 4:** Clean the `messy_orders.csv` dataset:
