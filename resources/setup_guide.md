@@ -429,26 +429,5 @@ Once everything above is checked off:
 **Welcome to the pilot. You've already done the hardest part – setting up. The rest is learning.**
 
 *Save this guide. You'll need it again in Week 1 when you launch Jupyter.*
-
----
-
 **Questions?** Post in `#setup-help` on Slack. Include a screenshot – it helps us help you faster.
 
----
-
-## Key Improvements for Total Beginners
-
-| Previous Version | New Version |
-|-----------------|-------------|
-| "Install Anaconda" | Step-by-step click-by-click with screenshots described in text |
-| Mac/Linux instructions brief | Full instructions for each OS separately |
-| Assumed terminal knowledge | Explains every command before using it |
-| No PATH explanation | Explicitly tells Windows users to check the PATH box (critical) |
-| GitHub via command line | GitHub Desktop (buttons, no typing) recommended |
-| No troubleshooting table | Common issues table with specific solutions |
-| "You should know what a terminal is" | Teaches what a terminal is and when to use it |
-
-**Would you like me to also generate:**
-1. `exercise2_functions_csv.ipynb` (Week 1 exercise)
-2. `data/sample_sales.csv` (practice data)
-3. A **"Week 0 Setup"** README that points students to this guide?
