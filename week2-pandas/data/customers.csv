@@ -1,0 +1,51 @@
+customer_id,segment,region
+101,Corporate,North
+102,Consumer,South
+103,Home Office,North
+104,Corporate,East
+105,Consumer,West
+106,Home Office,North
+107,Corporate,South
+108,Consumer,E
+109,Home Office,West
+110,Corporate,North
+111,Consumer,South
+112,Home Office,East
+113,Corporate,West
+114,Consumer,North
+115,Home Office,South
+116,Corporate,East
+117,Consumer,West
+118,Home Office,North
+119,Corporate,South
+120,Consumer,East
+121,Corporate,West
+122,Home Office,North
+123,Consumer,South
+124,Corporate,East
+125,Consumer,West
+126,Home Office,North
+127,Corporate,South
+128,Consumer,East
+129,Home Office,West
+130,Corporate,North
+131,Consumer,South
+132,Home Office,East
+133,Corporate,West
+134,Consumer,North
+135,Home Office,South
+136,Corporate,East
+137,Consumer,West
+138,Home Office,North
+139,Corporate,South
+140,Consumer,East
+141,Home Office,West
+142,Corporate,North
+143,Consumer,South
+144,Home Office,East
+145,Corporate,West
+146,Consumer,North
+147,Home Office,South
+148,Corporate,East
+149,Consumer,West
+150,Home Office,North
