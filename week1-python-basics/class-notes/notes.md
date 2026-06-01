@@ -1045,8 +1045,3 @@ By the end of Week 1, you should understand:
 | **Reference** | Use the cheat sheet for syntax look-up |
 
 **File to save as:** `week1-python-basics/class_notes.md` (or `.pdf` for printing)
-
-**Would you like me to generate:**
-1. `week1-python-basics/slides.pdf` content (markdown format you can convert to slides)?
-2. `exercise2_functions_csv.ipynb` (the second exercise notebook)?
-3. `data/sample_sales.csv` (the CSV file students use)?
