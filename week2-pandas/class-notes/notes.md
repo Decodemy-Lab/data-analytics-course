@@ -994,7 +994,7 @@ df = pd.read_csv('large_file.csv', nrows=1000)
 
 
 <details>
-<summary>Click to reveal the Python solution</summary>
+<summary>Click to reveal the solution</summary>
 
 ```python
 # Solution
@@ -1005,8 +1005,12 @@ print(f"Shape: {df.shape}")
 print(f"Columns: {df.columns.tolist()}")
 print(f"Missing:\n{df.isnull().sum()}")
 ```
+</details>
 
 **Problem 2:** Filter to show only orders from the 'North' region with sales > $200.
+
+<details>
+<summary>Click to reveal the solution</summary>
 
 ```python
 # Solution
@@ -1014,9 +1018,13 @@ north_high = df[(df['region'] == 'North') & (df['sales'] > 200)]
 print(f"Found {len(north_high)} orders")
 north_high.head()
 ```
+</details>
 
 **Problem 3:** Calculate total sales and average profit by category.
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution
 category_stats = df.groupby('category').agg({
@@ -1026,6 +1034,7 @@ category_stats = df.groupby('category').agg({
 print(category_stats)
 ```
 
+</details>
 ### Intermediate
 
 **Problem 4:** Clean the `messy_orders.csv` dataset:
@@ -1033,6 +1042,9 @@ print(category_stats)
 - Convert `order_date` to datetime
 - Remove rows with negative quantity
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution
 def clean_dataset(df):
@@ -1056,9 +1068,13 @@ clean_df = clean_dataset(df)
 print(f"Cleaned: {len(clean_df)} rows")
 print(f"Missing profit: {clean_df['profit'].isnull().sum()}")
 ```
+</details>
 
 **Problem 5:** Merge orders with customers and find total sales by customer segment.
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution
 orders = pd.read_csv('week2-pandas/data/messy_orders.csv')
@@ -1075,8 +1091,13 @@ segment_sales = merged.groupby('segment')['sales'].sum().sort_values(ascending=F
 print(segment_sales)
 ```
 
+</details>
+
 **Problem 6:** Find the top 3 products by total quantity sold.
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution (assuming a 'product' column exists)
 product_quantity = df.groupby('product')['quantity'].sum().sort_values(ascending=False)
@@ -1088,6 +1109,7 @@ category_quantity = df.groupby('category')['quantity'].sum().sort_values(ascendi
 top_3_categories = category_quantity.head(3)
 print(top_3_categories)
 ```
+</details>
 
 ### Challenge (Optional)
 
@@ -1099,6 +1121,9 @@ print(top_3_categories)
 - Order count
 - Average order value
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution
 summary = df.groupby('region').agg({
@@ -1120,6 +1145,7 @@ summary = summary.reset_index()
 print(summary)
 ```
 
+</details>
 ---
 
 ## Cheat Sheet
