@@ -3,7 +3,7 @@
 **Course:** Foundations of Data Analytics (Pilot)  
 **Week:** 3 of 4  
 **Prerequisites:** Weeks 1-2 completed (Python basics + Pandas data manipulation)  
-**Instructor:** [Your Name]
+**Instructor:** Amos Augo
 
 ---
 
@@ -1059,4 +1059,213 @@ correlation = df[numeric_cols].corr()
 
 # Create heatmap
 plt.figure(figsize=(8, 6))
-sns.heatmap
+sns.heatmap(correlation, annot=True, cmap='coolwarm', center=0, 
+            square=True, fmt='.2f', linewidths=0.5)
+plt.title('Correlation Matrix of Numeric Variables')
+plt.tight_layout()
+plt.show()
+
+# Interpretation of output:
+# - Values close to 1.0: strong positive correlation (both increase together)
+# - Values close to -1.0: strong negative correlation (one increases, the other decreases)
+# - Values close to 0: no linear relationship
+```
+
+---
+
+### Challenge (Tableau)
+
+**Problem 9:** Create a dashboard with a parameter that allows the user to switch between viewing SUM(profit) and AVG(profit) in a bar chart.
+
+**Step-by-step solution:**
+1. Create a parameter:
+   - Right-click in Data Pane → Create → Parameter
+   - Name: `Profit Aggregation`
+   - Data type: String
+   - Allowable values: List
+   - Values: `Total Profit`, `Average Profit`
+
+2. Create a calculated field:
+   - Right-click → Create Calculated Field
+   - Name: `Dynamic Profit`
+   - Formula:
+     ```
+     IF [Profit Aggregation] = 'Total Profit' THEN 
+         SUM([profit])
+     ELSE 
+         AVG([profit])
+     END
+     ```
+
+3. Build bar chart:
+   - Drag `region` to Columns
+   - Drag `Dynamic Profit` to Rows
+   - Show parameter control: Right-click parameter → Show Parameter Control
+
+4. User can now toggle between total and average profit
+
+---
+
+## Cheat Sheet
+
+### Matplotlib Quick Reference
+
+| What | Code |
+|------|------|
+| Basic line | `plt.plot(x, y)` |
+| Bar chart | `plt.bar(x, height)` |
+| Scatter | `plt.scatter(x, y)` |
+| Histogram | `plt.hist(data, bins=20)` |
+| Add title | `plt.title('My Title')` |
+| X label | `plt.xlabel('X Axis')` |
+| Y label | `plt.ylabel('Y Axis')` |
+| Legend | `plt.legend()` |
+| Grid | `plt.grid(True)` |
+| Save figure | `plt.savefig('chart.png', dpi=300)` |
+| Show plot | `plt.show()` |
+| Subplots | `fig, axes = plt.subplots(2, 2)` |
+| Figure size | `plt.figure(figsize=(10, 6))` |
+| Rotate x labels | `plt.xticks(rotation=45)` |
+| Add horizontal line | `plt.axhline(y=0, color='red')` |
+| Add vertical line | `plt.axvline(x=100, color='red')` |
+
+### Seaborn Quick Reference
+
+| What | Code |
+|------|------|
+| Bar plot | `sns.barplot(data=df, x='cat', y='num', estimator=sum)` |
+| Histogram + KDE | `sns.histplot(data=df, x='num', bins=30, kde=True)` |
+| Scatter | `sns.scatterplot(data=df, x='num1', y='num2', hue='cat')` |
+| Box plot | `sns.boxplot(data=df, x='cat', y='num')` |
+| Violin plot | `sns.violinplot(data=df, x='cat', y='num')` |
+| Pairplot | `sns.pairplot(df, hue='region')` |
+| Heatmap | `sns.heatmap(df.corr(), annot=True)` |
+| Regression plot | `sns.regplot(data=df, x='x', y='y')` |
+| Set style | `sns.set_style('whitegrid')` |
+| Set context | `sns.set_context('talk')` |
+| Set palette | `sns.set_palette('viridis')` |
+
+### Tableau Quick Reference
+
+| Action | How to Do It |
+|--------|--------------|
+| Connect to CSV | Connect → Text File → Select file |
+| Create bar chart | Drag dimension to Columns, measure to Rows |
+| Create line chart | Same as bar, but change chart type in Marks card |
+| Add filter | Drag dimension to Filters card |
+| Create calculated field | Right-click Data Pane → Create Calculated Field |
+| Create dashboard | Click New Dashboard tab (bottom) |
+| Add sheets to dashboard | Drag from left pane onto dashboard |
+| Create dashboard action | Dashboard → Actions → Add Action → Filter |
+| Publish | File → Save to Tableau Public As... |
+
+### Tableau Dashboard Design Checklist
+
+| Element | Good Practice | Avoid |
+|---------|--------------|-------|
+| Number of sheets | 3-5 per dashboard | 10+ sheets on one page |
+| Filters | Place at top or left | Scattered randomly |
+| Colors | Consistent (blue=sales, green=profit) | Rainbow (too many colors) |
+| Labels | Clear, readable font | Tiny, overlapping text |
+| Title | Descriptive ("Q1 2024 Sales") | Vague ("Dashboard 1") |
+| Interactivity | At least 1 filter or action | Static only |
+
+---
+
+## Key Takeaways
+
+By the end of Week 3, you should understand:
+
+### Python Visualization (Matplotlib/Seaborn)
+
+1. **Matplotlib is the foundation** – most Python plotting libraries build on it
+2. **Seaborn has better defaults** – use it for quick, beautiful plots
+3. **The 4 essential plots** – line (trends), bar (comparisons), scatter (relationships), histogram (distributions)
+4. **Customization is key** – titles, labels, colors, and legends make charts understandable
+5. **Subplots show multiple views** – use `plt.subplots()` for side-by-side comparisons
+
+### Tableau Visualization
+
+6. **Blue (dimensions) vs Green (measures)** – categories vs numbers
+7. **Drag-and-drop interface** – no coding needed for basic charts
+8. **Dashboards combine sheets** – multiple views in one page
+9. **Filters add interactivity** – users can explore their own questions
+10. **Public sharing is easy** – one click to publish online
+
+### The Python → Tableau Workflow
+
+```
+Week 2 (Pandas)           Week 3 (Python plots)      Week 3 (Tableau)
+     ↓                           ↓                          ↓
+Clean messy data    →    Explore with Python      →    Present with Tableau
+(handle missing,         (find patterns,           (build interactive
+ fix types,               test hypotheses)          dashboard for sharing)
+ remove outliers)
+```
+
+**What comes next:** In Week 4 (Capstone), you'll combine everything:
+- Clean a NEW messy dataset (Pandas)
+- Explore with Python plots (Matplotlib/Seaborn)
+- Build a Tableau dashboard
+- Present findings in a Loom video
+
+---
+
+## Additional Resources
+
+### Python Visualization
+- [Matplotlib Gallery](https://matplotlib.org/stable/gallery/index.html) – Copy-paste examples
+- [Seaborn Gallery](https://seaborn.pydata.org/examples/index.html) – Beautiful examples with code
+- [Python Data Visualization (Real Python)](https://realpython.com/tutorials/data-viz/)
+
+### Tableau Learning (Free)
+- [Tableau Public Getting Started](https://public.tableau.com/app/learn/) – Official tutorials
+- [Tableau Makeover Monday](https://makeovermonday.co.uk/) – Weekly practice with real datasets
+- [Dashboard Design Principles (YouTube)](https://youtu.be/3qjE-LlZR8E) – 10 minutes on best practices
+
+### Color Palettes (Accessible)
+- [ColorBrewer](https://colorbrewer2.org/) – Colorblind-friendly palettes
+- [Viridis Palette](https://matplotlib.org/stable/users/explain/colors/colormaps.html) – Sequential, perceptually uniform
+
+---
+
+## Office Hours & Support
+
+- **Slack:** `#python-help` (Python plots) and `#tableau-help` (Tableau questions)
+- **Office hours:** Saturday 11 AM–12 PM ET
+- **GitHub Issues:** For code submission problems
+
+**Remember:** 
+- Python plots for **exploration** (you can make 50 charts quickly)
+- Tableau for **presentation** (one polished dashboard is better than 50 messy ones)
+- The best chart is the one that answers the question
+
+> "Don't make me think. Every chart should have one clear takeaway." – Data visualization best practice
+
+---
+
+**End of Week 3 Class Notes**
+
+*Save this document. You'll use it in Week 4 for your capstone project.*
+
+---
+
+## Complete Week 3 Notes Summary
+
+| Section | Pages (approx) | Key Topics |
+|---------|---------------|------------|
+| Why Visualization Matters | 1 | Python vs Tableau, hierarchy |
+| Matplotlib | 3 | Line, bar, scatter, histogram, subplots |
+| Seaborn | 2 | Bar, box, scatter, pairplot, heatmap |
+| Chart Types & Use Cases | 1 | Choosing the right chart |
+| Customization | 2 | Colors, fonts, legends, annotations |
+| Advanced Plotting | 1 | Time series, multiple lines, Pandas plotting |
+| Tableau Introduction | 2 | Interface, dimensions vs measures |
+| Tableau Building Charts | 2 | Bar, line, scatter, maps, calculated fields |
+| Tableau Dashboards | 2 | Layout, filters, actions, publishing |
+| Common Errors | 2 | Python + Tableau troubleshooting |
+| Practice Problems | 3 | 9 problems with solutions |
+| Cheat Sheet | 1 | Quick reference for both tools |
+| Key Takeaways | 1 | Summary of what you learned |
+
+**Total length:** ~4,500 words, ~200 code examples, 9 practice problems
