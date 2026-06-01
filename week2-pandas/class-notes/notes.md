@@ -3,7 +3,7 @@
 **Course:** Foundations of Data Analytics (Pilot)  
 **Week:** 2 of 4  
 **Prerequisite:** Week 1 completed (variables, lists, loops, functions, CSV reading)  
-**Instructor:** [Your Name]
+**Instructor:** Amos Augo
 
 ---
 
@@ -1293,10 +1293,3 @@ df['high_value'] = df['sales'] > 500
 **Total length:** ~3,500 words, ~150 code examples
 
 **File to save as:** `week2-pandas/class_notes.md`
-
----
-
-Would you like me to generate:
-1. **Week 3 Class Notes** (Matplotlib, Seaborn, Tableau)?
-2. **Week 4 Class Notes** (Capstone project guide + review)?
-3. **Exercise notebooks** for Week 2 (`exercise1_cleaning_orders.ipynb`, etc.)?
