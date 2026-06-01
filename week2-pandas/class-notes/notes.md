@@ -1147,7 +1147,6 @@ print(summary)
 ```
 
 </details>
----
 
 ## Cheat Sheet
 
