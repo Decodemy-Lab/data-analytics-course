@@ -916,6 +916,9 @@ plt.savefig('chart.png', bbox_inches='tight')  # For saving
 
 **Problem 1:** Load `cleaned_orders.csv` from Week 2. Create a bar chart of total profit by category using Seaborn.
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution
 import pandas as pd
@@ -930,8 +933,13 @@ plt.ylabel('Total Profit ($)')
 plt.show()
 ```
 
+</details>
+
 **Problem 2:** Create a histogram of sales amounts with 30 bins and a red vertical line at the mean.
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution
 plt.figure(figsize=(10, 6))
@@ -943,6 +951,8 @@ plt.title('Distribution of Sales Amounts')
 plt.legend()
 plt.show()
 ```
+
+</details>
 
 ### Beginner (Tableau)
 
@@ -970,6 +980,9 @@ plt.show()
 - Bottom-left: Scatter plot (sales vs profit)
 - Bottom-right: Box plot (sales by category)
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution
 fig, axes = plt.subplots(2, 2, figsize=(12, 10))
@@ -996,8 +1009,13 @@ plt.tight_layout()
 plt.show()
 ```
 
+</details>
+
 **Problem 6:** Create a line chart with a 7-day rolling average.
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution
 # Ensure date is datetime and set as index
@@ -1019,6 +1037,8 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 ```
+
+</details>
 
 ### Intermediate (Tableau)
 
@@ -1049,6 +1069,9 @@ plt.show()
 
 **Problem 8:** Create a correlation heatmap with annotated values.
 
+<details>
+<summary>Click to reveal the solution</summary>
+    
 ```python
 # Solution
 # Select only numeric columns
@@ -1070,6 +1093,8 @@ plt.show()
 # - Values close to -1.0: strong negative correlation (one increases, the other decreases)
 # - Values close to 0: no linear relationship
 ```
+
+</details>
 
 ---
 
