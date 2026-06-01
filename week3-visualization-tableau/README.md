@@ -549,7 +549,6 @@ git push origin main
 **Estimated completion time:** 5–6 hours total this week (including lectures)
 
 **Remember:** Python plots for exploration, Tableau for presentation. Both are valuable. Both are learnable.
-```
 
 ---
 
